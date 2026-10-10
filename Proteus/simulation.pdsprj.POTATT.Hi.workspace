@@ -332,7 +332,7 @@
      <ITEM name="TopLineAddress">E000E000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="600" x="697" flags="0000002b" y="830" h="400" pid="100" iid="1">
+   <POPUP w="600" x="697" flags="0000002a" y="830" h="400" pid="100" iid="1">
     <PROPERTIES>
      <ITEM name="CaseSensitive">No</ITEM>
      <ITEM name="DISPADDRS">Yes</ITEM>
@@ -343,7 +343,7 @@
      <ITEM name="nBreakpoints">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="300" x="717" flags="0000000b" y="850" h="300" pid="101" iid="1">
+   <POPUP w="300" x="717" flags="0000000a" y="850" h="300" pid="101" iid="1">
     <PROPERTIES>
      <ITEM name="Address Column Width">92</ITEM>
      <ITEM name="AutoResize">No</ITEM>

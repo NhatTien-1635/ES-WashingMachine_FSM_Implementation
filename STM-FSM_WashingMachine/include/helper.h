@@ -1,3 +1,8 @@
+/**
+ * Không được động k là máy nổ :D
+ */
+
+
 #ifndef HELPER_H
 #define HELPER_H
 
@@ -13,10 +18,10 @@
 
 #define PIN_BUTTON_10_CENTS     GPIO_PIN_1
 #define PIN_BUTTON_20_CENTS     GPIO_PIN_2
-#define PIN_BUTTON_50_CENTS     GPIO_PIN_3
+#define PIN_BUTTON_50_CENTS     GPIO_PIN_15
 
 
 void SetupPinMode();
 void InitTIM();
 
-#endif
+#endif  

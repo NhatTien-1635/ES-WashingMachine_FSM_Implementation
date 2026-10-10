@@ -1,3 +1,7 @@
+/**
+ * Không được động k là máy nổ :D
+ */
+
 #include "helper.h"
 
 static TIM_HandleTypeDef htim2;
