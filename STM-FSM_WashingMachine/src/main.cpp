@@ -1,7 +1,10 @@
 #include "helper.h"
+#include "button.h"
+#include "led_display.h"
 #include "scheduler.h"
 #include "fsm.h"
 
+// Heartbeat LED task
 void Task_BlinkLED()
 {
     HAL_GPIO_TogglePin(GPIOB, PIN_LED_BLINK);
@@ -12,14 +15,17 @@ int main(void)
     HAL_Init();
     SetupPinMode();
     InitTIM();
+    LED_Display_Init();
 
-    Scheduler_AddTask(Task_BlinkLED, 100, 100); 
-    Scheduler_AddTask(Task_FSM, 1, 100);
+    Scheduler_AddTask(Task_BlinkLED, 13, 100);
+    Scheduler_AddTask(Task_ButtonScan, 2, 2);
+    Scheduler_AddTask(Task_FSM, 5, 10);
+    Scheduler_AddTask(Task_LEDDisplay, 1, 1);
 
     while (1)
     {
         Scheduler_Dispatch();
-        __WFI(); // Cho Proteus đỡ bùng nổ
+        __WFI(); // Wait for interrupt (reduces CPU load in Proteus)
     }
 }
 
