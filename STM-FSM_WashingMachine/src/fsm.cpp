@@ -187,6 +187,12 @@ static void StateFunction_RUNNING()
     {
         EnterNextState(WM_EV_BTN_STOP_TWICE); // Force stop
     }
+
+#if FAULT_CASE
+    // Just in simulating error case
+    if (washing_time_remaining == 5)
+        EnterNextState(WM_EV_FAULT);
+#endif
 }
 
 static void StateFunction_PAUSED() 

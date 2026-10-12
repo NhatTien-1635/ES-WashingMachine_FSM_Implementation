@@ -4,6 +4,10 @@
 #include <stdint.h>
 #include "helper.h"
 
+// Use to simulate the fault scenario when the machine is somehow broken after a while
+// 1 - enable fault case | 0 - disable fault case
+#define FAULT_CASE  0
+
 #define STATE_COUNT 5
 enum FSM_State : uint8_t
 {
